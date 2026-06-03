@@ -64,6 +64,11 @@ body{
   background:var(--paper);
   color:var(--ink);
 }
+/* Quiz screen: top-align so JS-rendered content is never pushed below viewport */
+#screen3{
+  justify-content:flex-start;
+  padding-top:max(72px, 10vh);
+}
 .page-inner{
   max-width:560px;
   margin:0 auto;
@@ -406,12 +411,16 @@ p.body{
   background:var(--paper-2);
   border:1.5px solid var(--rule);
   border-radius:12px;
-  padding:18px 8px;
+  padding:14px 4px;
+  min-height:54px;
   cursor:pointer;
   transition:all .15s ease;
   color:var(--ink);
   -webkit-appearance:none;
   appearance:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .scale-btn:hover{border-color:var(--ink);}
 .scale-btn.selected{
